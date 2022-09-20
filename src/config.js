@@ -1,3 +1,3 @@
 
-export const BASE_URL = process.env.REACT_APP_BASE_URL
-export const KEY = process.env.REACT_APP_KEY
+export const YOUTUBE_API_BASE_URL = process.env.REACT_APP_YOUTUBE_API_BASE_URL
+export const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
