@@ -1,87 +1,91 @@
 html {
-  height: 100vh;
-  font-family: sans-serif;
-  box-sizing: border-box;
+    height: 100vh;
+    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
 body,
 #root,
 .App {
-  height: 100%;
-  margin: 0;
+    height: 100%;
+    margin: 0;
 }
 
 .App {
-  display: grid;
-  grid-template-columns: 70% 1fr;
-  grid-template-rows: 70px auto;
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    grid-template-rows: 70px auto;
 }
+
 .search-form {
-  border-bottom: 1px solid lightgray;
-  display: flex;
-  justify-content: flex-start;
-  padding: 0 20px;
-  align-items: center;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 20px;
+    align-items: center;
 }
 
 .form-controls {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: space-between;
 }
+
 .form-controls input[type="text"] {
-  display: flex;
-  border: 1px solid lightgray;
-  flex-grow: 1;
-  padding: 10px;
-  border-radius: 4px;
-  font-size: 16px;
+    display: flex;
+    border: 1px solid lightgray;
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
 }
+
 .form-controls input[type="text"]:focus {
-  outline: none;
-  border-color: gray;
-  box-shadow: 0 2px 5px lightgray;
+    outline: none;
+    border-color: gray;
+    box-shadow: 0 2px 5px lightgray;
 }
 
 .form-controls label {
-  display: none;
+    display: none;
 }
 
 .video {
-  box-shadow: 0 2px 1px lightgray;
-  border: 1px solid lightgray;
-  border-radius: 2px;
-  margin: 20px 0;
+    box-shadow: 0 2px 1px lightgray;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin: 20px 0;
 }
 
-.video > .title {
-  text-align: center;
-  padding: 10px;
-  margin: 0;
-  font-weight: 600;
-  font-size: 14px;
+.video>.title {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-weight: 600;
+    font-size: 14px;
 }
+
 .video-list {
-  border-left: 1px solid lightgray;
-  grid-row: span 2;
-  padding: 0 20px;
-  height: 100%;
-  overflow: auto;
+    border-left: 1px solid lightgray;
+    grid-row: span 2;
+    padding: 0 20px;
+    height: 100%;
+    overflow: auto;
 }
 
 .video-player .video-iframe {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }

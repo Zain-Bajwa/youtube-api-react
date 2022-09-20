@@ -1,4 +1,5 @@
 import React from "react";
+import { YOUTUBE_BASE_URL } from "../Constants/Urls";
 
 const Videoplayer = ({ videoId }) => {
   if (!videoId) {
@@ -8,12 +9,13 @@ const Videoplayer = ({ videoId }) => {
       </p>
     );
   }
+
   return (
     <div className="video-player">
       <iframe
         title={videoId}
-        className="video-iframe"
-        src={`https://www.youtube.com/embed/${videoId}`}
+        className="video-iframe p-3"
+        src={YOUTUBE_BASE_URL + videoId}
       />
     </div>
   );

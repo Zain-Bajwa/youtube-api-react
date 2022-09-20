@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
 
-function selectVideo(videoIdObj, onVideoSelected) {
-  onVideoSelected(videoIdObj.videoId);
-}
+const selectVideo = (videoMetaData, onVideoSelected) => {
+  onVideoSelected(videoMetaData);
+};
 
 function getCss(imageurl) {
   const _styles = {
@@ -11,26 +11,31 @@ function getCss(imageurl) {
     backgroundSize: "cover",
     backgroundPosition: "center center",
     height: "180px",
-    position: "relative"
+    position: "relative",
   };
   return _styles;
 }
 
-function constructVideoTitles(vidoesData, onVideoSelected) {
-  return vidoesData.map(({ snippet, id }, index) => {
+const constructVideoTitles = (videosMetaData, onVideoSelected) => {
+  return videosMetaData.map((videoMetaData, index) => {
     return (
       <div
         className="video"
         key={index}
-        onClick={() => selectVideo(id, onVideoSelected)}>
-        <div style={getCss(snippet.thumbnails.high.url)} key={index} />
-        <p className="title">{snippet.title}</p>
+        onClick={() => selectVideo(videoMetaData, onVideoSelected)}
+      >
+        <div
+          style={getCss(videoMetaData.snippet.thumbnails.high.url)}
+          key={index}
+        />
+        <p className="title">{videoMetaData.snippet.title}</p>
       </div>
     );
   });
-}
-const Video = ({ data, onVideoSelected }) => {
-  return <>{constructVideoTitles(data, onVideoSelected)}</>;
+};
+
+const Video = ({ videosMetaData, onVideoSelected }) => {
+  return <>{constructVideoTitles(videosMetaData, onVideoSelected)}</>;
 };
 
 export default Video;
